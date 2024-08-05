@@ -1,3 +1,4 @@
 import routes from "./routes";
+import globalStyles from "./styles";
 
-export { routes };
+export { globalStyles, routes };

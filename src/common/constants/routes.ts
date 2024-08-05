@@ -11,6 +11,6 @@ const routes = {
       },
     },
   },
-};
+} as const;
 
 export default routes;
