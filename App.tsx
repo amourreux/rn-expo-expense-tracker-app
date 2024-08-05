@@ -1,3 +1,4 @@
+import { Ionicons } from "@expo/vector-icons";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
@@ -23,10 +24,20 @@ const ExpensesOverviewTabs = () => {
       <BottomTabs.Screen
         name={routes.stack.bottomStacks.screens.recentExpenses}
         component={RecentExpenseScreen}
+        options={{
+          tabBarIcon: ({ color, size }) => (
+            <Ionicons name="hourglass" size={size} color={color} />
+          ),
+        }}
       />
       <BottomTabs.Screen
         name={routes.stack.bottomStacks.screens.allExpenses}
         component={AllExpensesScreen}
+        options={{
+          tabBarIcon: ({ color, size }) => (
+            <Ionicons name="calendar" size={size} color={color} />
+          ),
+        }}
       />
     </BottomTabs.Navigator>
   );
