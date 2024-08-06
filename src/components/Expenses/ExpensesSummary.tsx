@@ -1,4 +1,4 @@
-import { ExpenseModel } from "@/src/Model";
+import { ExpenseModel } from "@/src/model";
 import { Text, View } from "react-native";
 
 interface ExpensesSummaryProps {
