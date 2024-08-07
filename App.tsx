@@ -3,7 +3,7 @@ import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { StatusBar } from "expo-status-bar";
-import { globalStyles, routes } from "./src/common/constants";
+import { globalStyles, routes, strings } from "./src/common/constants";
 import AllExpensesScreen from "./src/screens/AllExpenses";
 import ManageExpenseScreen from "./src/screens/ManageExpense";
 import RecentExpenseScreen from "./src/screens/RecentExpense";
@@ -28,6 +28,7 @@ const ExpensesOverviewTabs = () => {
           tabBarIcon: ({ color, size }) => (
             <Ionicons name="hourglass" size={size} color={color} />
           ),
+          title: strings.tabs.recent,
         }}
       />
       <BottomTabs.Screen
@@ -37,6 +38,7 @@ const ExpensesOverviewTabs = () => {
           tabBarIcon: ({ color, size }) => (
             <Ionicons name="calendar" size={size} color={color} />
           ),
+          title: strings.tabs.all,
         }}
       />
     </BottomTabs.Navigator>
